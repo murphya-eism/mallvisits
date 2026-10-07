@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EISM Mall Visits</title>
+<meta name="theme-color" content="#174a2d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Mall Visits">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#f0f7f0;color:#13261a;font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{background:#174a2d;border-bottom:4px solid #c8a02c;padding:calc(18px + env(safe-area-inset-top,0px)) 16px 16px;text-align:center}
+header img{width:84px;height:84px;border-radius:20px;display:block;margin:0 auto 8px}
+h1{margin:0;font-size:22px;color:#f2d88a}
+main{max-width:520px;margin:auto;padding:16px}
+.card{background:#fff;border:1px solid #c3dac7;border-left:4px solid #c8a02c;border-radius:12px;padding:14px;margin-bottom:12px}
+.open{display:block;text-align:center;background:#1b5e38;color:#fff;text-decoration:none;font-weight:700;border-radius:12px;padding:15px;margin-bottom:14px;border:2px solid #c8a02c}
+h2{font-size:16px;margin:0 0 6px}
+ol{margin:6px 0 0;padding-left:20px}
+.m{color:#4d6655;font-size:14px}
+</style>
+</head>
+<body>
+<header><img src="icon-192.png" alt=""><h1>EISM Mall Visits</h1></header>
+<main>
+<a class="open" id="go" href="APP_URL_HERE">Open Mall Visits</a>
+<div class="card"><h2>Put it on your phone</h2>
+<div class="m">Do this once, so it opens like an app.</div>
+<ol>
+<li><b>iPhone:</b> open this page in <b>Safari</b>, tap the <b>Share</b> button, then <b>Add to Home Screen</b>.</li>
+<li><b>Android:</b> open this page in <b>Chrome</b>, tap the <b>three dots</b>, then <b>Add to Home screen</b> (or <b>Install app</b>).</li>
+</ol></div>
+<div class="card m">Sign in with your school Google account when asked. If the page stays blank, open the link in a private/incognito tab and sign in there.</div>
+</main>
+<script>
+var APP = "APP_URL_HERE";
+var standalone = (window.navigator.standalone === true) || (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches);
+// When opened from the home-screen icon, go straight to the app. In a normal browser tab, stay here so people can install it.
+if (standalone && APP.indexOf("http") === 0) { location.replace(APP); }
+</script>
+</body>
+</html>
