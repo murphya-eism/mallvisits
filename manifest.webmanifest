@@ -1,6 +1,6 @@
 {
-  "name": "EISM Mall Visits",
-  "short_name": "Mall Visits",
+  "name": "EISM Staff Hub",
+  "short_name": "Staff Hub",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
